@@ -6,6 +6,9 @@
 
 一个完全可配置的 ComfyUI 前端菜单扩展，让你轻松自定义菜单结构、样式和功能，无需修改任何代码！
 
+## 手册
+[https://plugin.aix.ink/archives/CGSFIC6p](https://plugin.aix.ink/archives/CGSFIC6p)
+
 ## 效果
 ![icons/github_1](icons/github_1.png)
 

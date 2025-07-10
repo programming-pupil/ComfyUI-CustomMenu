@@ -1,0 +1,67 @@
+{
+    "extensionName": "aigc_06_MenuConfigurable",
+    "commands": [
+        {
+            "id": "homePageLink",
+            "label": "作 者 主 页",
+            "action": {
+                "type": "open_url",
+                "value": "https://aix.ink"
+            }
+        },
+        {
+            "id": "qrcodeLink",
+            "label": "豪 华 礼 包",
+            "action": {
+                "type": "show_qrcode",
+                "value": {
+                    "image": "qr_code.png",
+                    "title": "微信扫码联系编程界的小学生",
+                    "description": "微信: aigc_06  欢迎少年~"
+                }
+            }
+        }
+    ],
+    "menuStructure": [
+        {
+            "path": [
+                "编程界的小学生（vx：aigc_06）"
+            ],
+            "commands": [
+                "homePageLink",
+                "qrcodeLink"
+            ]
+        }
+    ],
+    "iconMapping": {
+        "编程界的小学生（vx：aigc_06）": "1.png",
+        "作 者 主 页": "1.png",
+        "豪 华 礼 包": "qr_code.png"
+    },
+    "menuOrder": {
+        "topLevelMenuLabel": "编程界的小学生（vx：aigc_06）",
+        "position": "prepend"
+    },
+    "menuStyling": {
+        "编程界的小学生（vx：aigc_06）": {
+            "color": "#64bdc8",
+            "width": "200px",
+            "height": "50px",
+            "fontSize": "16px",
+            "fontWeight": "bold",
+            "iconWidth": "32px",
+            "iconHeight": "32px",
+            "padding": "8px 12px"
+        },
+        "作 者 主 页": {
+            "fontSize": "18px",
+            "iconWidth": "32px",
+            "iconHeight": "32px"
+        },
+        "豪 华 礼 包": {
+            "fontSize": "18px",
+            "iconWidth": "32px",
+            "iconHeight": "32px"
+        }
+    }
+}

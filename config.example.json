@@ -1,0 +1,100 @@
+{
+    "extensionName": "MyCustomMenu",
+    "commands": [
+        {
+            "id": "homePageLink",
+            "label": "官方网站",
+            "action": {
+                "type": "open_url",
+                "value": "https://example.com"
+            }
+        },
+        {
+            "id": "documentationLink",
+            "label": "使用文档",
+            "action": {
+                "type": "open_url",
+                "value": "https://docs.example.com"
+            }
+        },
+        {
+            "id": "contactQR",
+            "label": "联系方式",
+            "action": {
+                "type": "show_qrcode",
+                "value": {
+                    "image": "contact_qr.png",
+                    "title": "扫码联系我们",
+                    "description": "微信: your_wechat_id"
+                }
+            }
+        },
+        {
+            "id": "aboutAlert",
+            "label": "关于",
+            "action": {
+                "type": "alert",
+                "value": "这是一个可配置的ComfyUI菜单扩展"
+            }
+        },
+        {
+            "id": "debugLog",
+            "label": "调试信息",
+            "action": {
+                "type": "console_log",
+                "value": "Debug: Menu extension loaded successfully"
+            }
+        }
+    ],
+    "menuStructure": [
+        {
+            "path": ["我的工具箱"],
+            "commands": ["homePageLink", "documentationLink"]
+        },
+        {
+            "path": ["我的工具箱", "联系支持"],
+            "commands": ["contactQR", "aboutAlert"]
+        },
+        {
+            "path": ["开发工具"],
+            "commands": ["debugLog"]
+        }
+    ],
+    "iconMapping": {
+        "我的工具箱": "toolbox.png",
+        "联系支持": "support.png",
+        "开发工具": "dev.png",
+        "官方网站": "home.png",
+        "使用文档": "docs.png",
+        "联系方式": "contact.png",
+        "关于": "info.png",
+        "调试信息": "debug.png"
+    },
+    "menuOrder": {
+        "topLevelMenuLabel": "我的工具箱",
+        "position": "prepend"
+    },
+    "menuStyling": {
+        "我的工具箱": {
+            "color": "#4CAF50",
+            "width": "150px",
+            "height": "40px",
+            "fontSize": "14px",
+            "fontWeight": "bold",
+            "iconWidth": "24px",
+            "iconHeight": "24px",
+            "padding": "6px 10px"
+        },
+        "联系支持": {
+            "fontSize": "13px",
+            "iconWidth": "20px",
+            "iconHeight": "20px"
+        },
+        "开发工具": {
+            "color": "#FF9800",
+            "fontSize": "13px",
+            "iconWidth": "20px",
+            "iconHeight": "20px"
+        }
+    }
+}
